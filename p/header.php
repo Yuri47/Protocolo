@@ -104,13 +104,21 @@ require_once('functions/variaveis.php');
               </ul>
             </div><!--/.nav-collapse -->
               
-            <form method="POST" action="#">
+              
+              
+              
+              <?php
+  echo $_COOKIE['sesao'];
+    
+?>
+              
+            <form method="POST" action="functions/fazerLogin.php">
               
                 <label for="login">Login ou Email</label>      
                 <input type="text" name="login">
                 <label for="password">Senha</label>      
                 <input type="text" name="password">
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" name="entrar">
                 
               
             </form>
