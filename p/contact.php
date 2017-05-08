@@ -1,3 +1,15 @@
+<?php 
+//session_start();
+//esse código verifica se o usuário está logado. Se tiver a página é liberada para ele acessar. Se não tiver logado ele será 
+//redirecionado para a página inicial.
+if(!isset($_SESSION['login'])){
+    
+header('location:index.php');
+
+}
+
+?>
+
 <style type="text/css">
 
 </style>

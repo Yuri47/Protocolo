@@ -96,8 +96,8 @@ require_once('functions/variaveis.php');
             <div class="nav-collapse collapse">
               <ul class="nav">
                
-                <li class=""><a href="<?php echo $home ?>">Inicio</a></li>
-                <li class=""><a href="<?php echo $home.'?p=services' ?>">Serviços</a></li>
+                <li class=""><a href="<?php echo $home ?>">Home</a></li>
+                <li class=""><a href="<?php echo $home.'?p=processos' ?>">Processos</a></li>
                 <li class=""><a href="<?php echo $home.'?p=about' ?>">Sobre Nós</a></li>
                 <li class=""><a href="<?php echo $home.'?p=contact' ?>">Contato</a></li>
               
@@ -108,10 +108,19 @@ require_once('functions/variaveis.php');
               
               
               <?php
-  echo $_COOKIE['sesao'];
+    session_start();
     
-?>
-              
+               
+               if(isset($_SESSION['login'])){
+    echo $_SESSION['login'];
+     
+                   
+                   
+             echo       ' <a href="functions/fazerLogout.php"><button>Logout</button></a>';
+} else {
+                   
+                   ?>
+                       
             <form method="POST" action="functions/fazerLogin.php">
               
                 <label for="login">Login ou Email</label>      
@@ -122,6 +131,17 @@ require_once('functions/variaveis.php');
                 
               
             </form>
+              
+              <?php
+                   
+                   
+               }
+               
+               
+    
+?>
+     
+             
               
               
           </div><!-- /.navbar-inner -->
