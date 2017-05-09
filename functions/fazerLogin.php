@@ -22,6 +22,9 @@ require_once  ('variaveis.php');
                     
             $_SESSION['login'] = $row['login'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['lastName'] = $row['lastName'];
+            $_SESSION['mail'] = $row['mail'];
                 
             //libera a memoria com os dados da consulta
             $results->free();

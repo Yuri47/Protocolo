@@ -12,11 +12,12 @@ echo"<script language='javascript' type='text/javascript'>alert('Deseja apagar o
 
 $id = $_GET['id'];
 $protocolo = $_GET['prt'];
+$file = $_GET['file'];
 
 $query = "DELETE FROM file WHERE (id = '$id' AND protocolo = '$protocolo')";
     
 $mysqli->query($query);
 
- 
+unlink('../arquivos/'.$file);
 
 ?>

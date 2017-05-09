@@ -53,17 +53,62 @@ if (isset ($_POST['proc'])) {
 
 <?php 
     if (isset($_POST['view'])) {
+    require_once('functions/PHPMailer/class.phpmailer.php');   
+        
 ?>
     <img src="arquivos/<?php  echo $_POST['fileName'];?>" height="200px"></img>
 
     <p>Enviar por Email</p>
-    <form method="post" action="EnviarPorEmail">
+    <form method="post" action="">
+        <label for="mail">Digite o Email de destino</label>
         <input type="text" name="mail">
-        <input type="file" value="arquivos/fil.jpg" enctype="multipart/form-data">
+        <label for="mail">Assunto</label>
+        <input type="text" name="subject">
+        <label for="mail">Mensagem</label>
+        <input type="text" name="message">
+        <input type="hidden" name="fileName" value="<?php  echo $_POST['fileName'];?>">
+        <input type="hidden" name="protocolo" value="<?php  echo $_POST['protocolo'];?>">
+        
+        
+        <input type="submit" value="Enviar" name="sendMail">
+        
 
     </form>
+<?php
+    }
+?>        
+
 
 <?php 
+        if (isset($_POST['sendMail'])) {
+        require_once('functions/PHPMailer/class.phpmailer.php');  
+            
+        $myMail = $_SESSION['mail'];
+        $name = $_SESSION['name'].' '.$_SESSION['lastName'];
+        $destinyMail = $_POST['mail'];
+        $subject = $_POST['subject'];
+        $protocolo = $_POST['protocolo'];
+        $message = $_POST['message'].'\n Protocolo da imagem: '. $protocolo;
+        $file = $_POST['fileName'];
+        
+        
+        
+        
+        $email = new PHPMailer();
+        $email->From      = $myMail;
+        $email->FromName  = $name;
+        $email->Subject   = $subject;
+        $email->Body      = $message;
+        $email->AddAddress( $destinyMail ); 
+        
+        $file_to_attach = 'arquivos/'.$file;
+        $email->AddAttachment( $file_to_attach , $file );
+        
+        if ($email->Send()) {
+            echo "Mensagem Enviada!";
+        } else {
+            echo "Mensagem Não Enviada!";
+        }
     }
 ?>        
 
@@ -97,12 +142,13 @@ if (isset ($_POST['proc'])) {
         
         <form method="post">
             <input type="hidden" name="fileName" value="<?php  echo $row['fileName'];?>">
+            <input type="hidden" name="protocolo" value="<?php  echo $row['protocolo'];?>">
             <input type="submit" value="Visualizar" name="view">
         </form>
          
          
     </td>
-    <td><a href="functions/deletarArquivo.php?id=<?php  echo $row['id'];?>&prt=<?php  echo $row['protocolo'];?>"  >Apagar</a></td>
+    <td><a href="functions/deletarArquivo.php?id=<?php  echo $row['id'];?>&prt=<?php  echo $row['protocolo'];?>&file=<?php  echo $row['fileName'];?>"  >Apagar</a></td>
      
      
   </tr>

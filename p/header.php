@@ -98,7 +98,7 @@ require_once('functions/variaveis.php');
                
                 <li class=""><a href="<?php echo $home ?>">Home</a></li>
                 <li class=""><a href="<?php echo $home.'?p=processos' ?>">Processos</a></li>
-                <li class=""><a href="<?php echo $home.'?p=about' ?>">Sobre Nós</a></li>
+                <li class=""><a href="<?php echo $home.'?p=usuario' ?>">Usuário</a></li>
                 <li class=""><a href="<?php echo $home.'?p=contact' ?>">Contato</a></li>
               
               </ul>
@@ -149,3 +149,4 @@ require_once('functions/variaveis.php');
 
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
+<hr>
