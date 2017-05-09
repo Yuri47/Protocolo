@@ -49,6 +49,26 @@ if (isset ($_POST['proc'])) {
     $results = $mysqli->query("SELECT * FROM file WHERE idUser = '$id'");
 
 ?>
+<hr>
+
+<?php 
+    if (isset($_POST['view'])) {
+?>
+    <img src="arquivos/<?php  echo $_POST['fileName'];?>" height="200px"></img>
+
+    <p>Enviar por Email</p>
+    <form method="post" action="EnviarPorEmail">
+        <input type="text" name="mail">
+        <input type="file" value="arquivos/fil.jpg" enctype="multipart/form-data">
+
+    </form>
+
+<?php 
+    }
+?>        
+
+
+<hr>
 <table>
     
   <tr>
@@ -56,6 +76,7 @@ if (isset ($_POST['proc'])) {
     <th>Nome do Arquivo</th> 
     <th>Visualizar</th>
     <th>Apagar</th>
+     
       
   </tr>
     
@@ -71,8 +92,18 @@ if (isset ($_POST['proc'])) {
      <tr>
     <td><?php echo $row['protocolo'];?></td>
     <td><?php echo $row['fileName'];?></td>
-    <td><a href="arquivos/<?php  echo $row['fileName'];?>" target="_blank">Visualizar</a></td>
+    <td>
+        
+        
+        <form method="post">
+            <input type="hidden" name="fileName" value="<?php  echo $row['fileName'];?>">
+            <input type="submit" value="Visualizar" name="view">
+        </form>
+         
+         
+    </td>
     <td><a href="functions/deletarArquivo.php?id=<?php  echo $row['id'];?>&prt=<?php  echo $row['protocolo'];?>"  >Apagar</a></td>
+     
      
   </tr>
     
