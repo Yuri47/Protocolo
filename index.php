@@ -1,13 +1,14 @@
 <?php
 include ('p/header.php');
 ?>
-  <body>
+  
 
 
 <?php
 require_once('functions/variaveis.php');
 ?>
 
+<div class="conteudo">
 
 <?php
 @$p = $_GET['p'];
@@ -31,7 +32,7 @@ if(file_exists('p/'.$pagina.'.php')) {
 		  include ('p/404.php');
 	  }
 
-
+echo '</div>';
 
 //include ('p/home.php');
 

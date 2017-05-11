@@ -51,7 +51,7 @@ require_once('functions/variaveis.php');
 		<meta name="author" content="">
 
 		<!-- Le styles -->
-		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="estilo/estilo.css" rel="stylesheet">
 		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 		<!-- GLOBAL STYLES-->
 		<link href="bootstrap/css/global-style.css" rel="stylesheet">
@@ -70,9 +70,14 @@ require_once('functions/variaveis.php');
 
 
 	</head>
-
+    <body>
  
 
+        
+        
+        
+        
+        
 
 	<!-- NAVBAR
     ================================================== -->
@@ -81,32 +86,10 @@ require_once('functions/variaveis.php');
       <div class="container">
 
         <div class="navbar navbar navbar-fixed-top">
-          <div class="navbar-inner">
+          <div class="logo">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="<?php echo $home ?>">
-                <img alt="Brand" src="bootstrap/img/favicon.png">
-                 
-              </a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-               
-                <li class=""><a href="<?php echo $home ?>">Home</a></li>
-                <li class=""><a href="<?php echo $home.'?p=processos' ?>">Processos</a></li>
-                <li class=""><a href="<?php echo $home.'?p=usuario' ?>">Usuário</a></li>
-                <li class=""><a href="<?php echo $home.'?p=contact' ?>">Contato</a></li>
-              
-              </ul>
-            </div><!--/.nav-collapse -->
-              
-              
-              
-              
+             <img src="arquivos/alppa.png">
+                            
               <?php
     session_start();
     
@@ -140,11 +123,34 @@ require_once('functions/variaveis.php');
                
     
 ?>
-     
+     </div><!-- /.navbar-inner -->
+              
+              
+              
+              
+              
+              
+              
+             <div class="divMenu">
+            <nav>
+            <div class="menu">
+              <ul class="nav">
+               
+                <li class=""><a href="<?php echo $home ?>">Home</a></li>
+                <li class=""><a href="<?php echo $home.'?p=processos' ?>">Processos</a></li>
+                <li class=""><a href="<?php echo $home.'?p=usuario' ?>">Usuário</a></li>
+                <li class=""><a href="<?php echo $home.'?p=contact' ?>">Contato</a></li>
+              
+              </ul>
+            </div><!--/.menu -->
+            </nav>   
+              </div>
+              
+
              
               
               
-          </div><!-- /.navbar-inner -->
+          
         </div><!-- /.navbar -->
 
       </div> <!-- /.container -->
