@@ -1,9 +1,8 @@
  
 
 		<footer>
-            <br><br><br><br>
-            <hr>
-<div> <p> Footer</p></div>
+            
+<div> <p> Sistema de Protocolos JK - 2017</p></div>
 </footer>
 
 

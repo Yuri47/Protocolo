@@ -49,5 +49,5 @@ echo '</div>';
 include ('p/footer.php');
 ?>
 
-
+</div><!-- site -->
 </body></html>

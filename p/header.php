@@ -18,7 +18,7 @@ else {
 $pageName;
 
 if ($p == "home") {
-  $pageName = "Macromix Informática";
+  $pageName = "JK";
 } else if ($p == "about") {
   $pageName = "Sobre Nós";
 } else if ($p == "contact") {
@@ -71,7 +71,7 @@ require_once('functions/variaveis.php');
 
 	</head>
     <body>
- 
+ <div class="site">
 
         
         
@@ -81,47 +81,15 @@ require_once('functions/variaveis.php');
 
 	<!-- NAVBAR
     ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
+    
 
-        <div class="navbar navbar navbar-fixed-top">
+        <div class="containerTop">
           <div class="logo">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
              <img src="arquivos/alppa.png">
                             
               <?php
-    session_start();
-    
-               
-               if(isset($_SESSION['login'])){
-    echo $_SESSION['login'];
-     
-                   
-                   
-             echo       ' <a href="functions/fazerLogout.php"><button>Logout</button></a>';
-} else {
-                   
-                   ?>
-                       
-            <form method="POST" action="functions/fazerLogin.php">
-              
-                <label for="login">Login ou Email</label>      
-                <input type="text" name="login">
-                <label for="password">Senha</label>      
-                <input type="text" name="password">
-                <input type="submit" value="Login" name="entrar">
-                
-              
-            </form>
-              
-              <?php
-                   
-                   
-               }
-               
-               
-    
+                session_start();
 ?>
      </div><!-- /.navbar-inner -->
               
@@ -140,10 +108,35 @@ require_once('functions/variaveis.php');
                 <li class=""><a href="<?php echo $home.'?p=processos' ?>">Processos</a></li>
                 <li class=""><a href="<?php echo $home.'?p=usuario' ?>">Usuário</a></li>
                 <li class=""><a href="<?php echo $home.'?p=contact' ?>">Contato</a></li>
-              
+                  
+                    <?php
+                           if(isset($_SESSION['login'])){
+     
+     
+                   ?>
+                  
+                <li class=""><a href="functions/fazerLogout.php">Sair</a></li>
+              <?php } ?>
+                  
               </ul>
             </div><!--/.menu -->
             </nav>   
+                 <div>
+                     <?php
+                           if(isset($_SESSION['login'])){
+     
+     
+                   ?>
+                     
+                     <div class="bemvindo">Seja Bem Vindo <?php echo $_SESSION['name'].' '.$_SESSION['lastName']; ?></div>
+                     
+                     <?php
+                   
+              
+}
+                                ?>
+                 </div>
+                 
               </div>
               
 
@@ -153,6 +146,5 @@ require_once('functions/variaveis.php');
           
         </div><!-- /.navbar -->
 
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-<hr>
+      
+ 

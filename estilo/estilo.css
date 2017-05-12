@@ -52,37 +52,50 @@ table {
 div {
     display: block;
 }
-html,
-body {
-  height:100%
-} 
+html, body {
+   height: 100%;
+}
+ 
+*  {
+    margin:0;
+    padding:0;
+}
+
  
 
 body {
   
-    background-color: #daf6ff; 
-    font-family: "Lato";
-    font-weight: 300;
+    background-color: #333; 
+    font-family: "Arial";
+     
     font-size: 16px;
     color: #333;
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
     text-align: center;
+    
      
 }
-
+.site {
+     background-color: #fff;
+    width: 960px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    margin: 0 auto;
+}
 .container {
-    width: 1280px;
+   
+    left: 0;
+    right: 0;
+    background-color: firebrick;
 }
 
-.menu-mobile {
-    display: none;
-}
+ 
 
 nav {
-    background-color: red;
+    background-color: ;
     height: 50px;
-    position: fixed;
+    
      
     left: 0;
     right: 0;
@@ -92,13 +105,20 @@ nav {
 .menu {
     background-color:  ;
 }
+.bemvindo {
+     font-size: 1.4em;
+     text-decoration: none;
+    color: #333;
+    padding: 0px;
+    font-family: 'Arial';
+}
 nav ul {
    
 }
 nav ul li {
     display: inline-block;
    
-    font-size: 1.9em;
+    font-size: 1.6em;
     margin: 0 20px;
    
      height: 50px;
@@ -107,36 +127,139 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: #e4e4e4;
+    color: #333;
     padding: 15px;
-    font-family: 'Lato-HairLine';
+    font-family: 'Arial';
      
      
 }
 nav ul li:hover {
     
-     background-color: rgba(0,0,0, 0.3);
+     /*background-color: rgba(0,0,0, 0.3); */
+    background-color: rgba(26,84,147, 1);
+    height: 40px;
+    
+  
+}
+nav ul li a:hover {
+     
+    color: #fff;
+     
+     
      
 }
+
 .conteudo {
-    background-color: darkgray;
+     
+    margin-top: 0px;
+    width: 960px;
+    left: 0;
+    right: 0;
+     
+    float:none;
+    display: block;
+    min-height: 78%;
+    background-color: #fff;
+     
+     
 }
 .logo {
-    background-color: forestgreen;
-    width: 100%;
+    
+     float: left;
+    
+    
 }
 .divMenu {
-    padding-top: 40px;
+     float: right;
+   
+    margin-top: 10px;
 }
 
 .logo img {
     width: 100px;
 }
+.containerTop {
+    margin-top: 0px;
+      display: inline-block;
+     
+}
+footer {
+    position:relative;
+    bottom:0;
+    width:100%;
+    background-color: #fff;
+    min-height: 50px;
+     
+}
 
+.home {
+    max-width: 960px;
+}
+.formCadastro{
+    float: left;
+    width: 50%;
+     
+    font-size: 1.4em;
+}
+.formLogin {
+    float: right;
+    width: 50%;
+    font-size: 1.4em;
+}
 
+.home label {
+    text-align: left;
+    
+    color: #333;
+    display: block;
+    margin-bottom: 2px;
+}
+.home form {
+    margin: 0px 50px;
+}
+input {
+    width: 80%;
+    float: none;
+    margin-left: -20%;
+    height: 2em;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-indent: 10px;
+    border: solid 2px #333;
+}
+.pHome {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pCadastro, .pLogin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 1.4em;
+    height: 60px;
+    text-align: left;
+    float: none;
+    margin-left: 50px;
+    font: "Arial";
+    color: #333;
+}
 
-
-
-
-
-
+.botao {
+        font-size: 22px;
+     
+    
+    background-color: transparent;
+    border: solid 2px #333;
+    color: #333;
+    transition: 0.5s;
+    display: block;
+     width: auto;
+  
+    
+}
+.botaoSubmit {
+    padding-right: 10px;
+    float: none;
+    margin-left: 0px;
+}
