@@ -30,12 +30,12 @@
     <label for="lastName">Sobrenome</label>
     <input type="text" name="lastName">
     
-    <label for="lastName">Login</label>
-    <input type="text" name="login">
-    
-    <label for="mail">Email</label>
+     <label for="mail">Email</label>
     <input type="text" name="mail">
     
+    <label for="lastName">Login</label>
+    <input type="text" name="login">
+      
     <label for="password">Senha</label>
     <input type="password" name="password">
     

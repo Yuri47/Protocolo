@@ -189,7 +189,13 @@ footer {
     width:100%;
     background-color: #fff;
     min-height: 50px;
+   
      
+}
+
+footer p {
+     text-align: center;
+    padding-top: 30px;
 }
 
 .home {
@@ -217,7 +223,7 @@ footer {
 .home form {
     margin: 0px 50px;
 }
-input {
+input g {
     width: 80%;
     float: none;
     margin-left: -20%;
@@ -252,7 +258,7 @@ input {
     background-color: transparent;
     border: solid 2px #333;
     color: #333;
-    transition: 0.5s;
+     
     display: block;
      width: auto;
   
@@ -262,4 +268,24 @@ input {
     padding-right: 10px;
     float: none;
     margin-left: 0px;
+}
+
+ 
+
+.formArquivo {
+    margin: 0px 50px;
+     
+    text-align: left;
+}
+
+.botaoArquivo {
+     font-size: 22px;
+     
+    
+    background-color: transparent;
+    
+    color: #333;
+     
+    display: block;
+     width: auto;
 }

@@ -16,11 +16,11 @@ header('location:index.php');
 
 
 
-<form method="post" action="index.php?p=processos" enctype="multipart/form-data">
-  <label>Arquivo</label>
-  <input type="file" name="arquivo" />
+<form class="formArquivo" method="post" action="index.php?p=processos" enctype="multipart/form-data">
+   
+  <input type="file" name="arquivo" class="  botaoArquivo"/>
   
-  <input type="submit" value="Enviar" name="proc"/>
+  <input type="submit" value="Enviar" name="proc" class="botao"/>
 </form>
 
 <?php 
