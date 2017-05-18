@@ -223,7 +223,7 @@ footer p {
 .home form {
     margin: 0px 50px;
 }
-input g {
+.home input {
     width: 80%;
     float: none;
     margin-left: -20%;
@@ -251,7 +251,21 @@ input g {
     color: #333;
 }
 
-.botao {
+  .botao {
+        font-size: 22px;
+     
+    
+    background-color: transparent;
+    border: solid 2px #333;
+    color: #333;
+     
+    display: block;
+     width: auto;
+      padding: 5px;
+  
+    
+}
+.home   .botao {
         font-size: 22px;
      
     
@@ -264,9 +278,9 @@ input g {
   
     
 }
-.botaoSubmit {
-    padding-right: 10px;
-    float: none;
+.home .botaoSubmit {
+     
+         text-indent: 0px;
     margin-left: 0px;
 }
 
@@ -288,4 +302,23 @@ input g {
      
     display: block;
      width: auto;
+}
+
+.tabela {
+    font-size: 20px;
+    padding-left: 20%;
+     
+}
+.tabela th {
+    padding: 10px;
+}
+.tabela td {
+    padding: 10px;
+    font-weight: 100;
+    font-size: 18px;
+}
+ 
+.imgProcesso {
+    height: 200px;
+     
 }

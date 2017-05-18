@@ -56,7 +56,8 @@ if (isset ($_POST['proc'])) {
     require_once('functions/PHPMailer/class.phpmailer.php');   
         
 ?>
-    <img src="arquivos/<?php  echo $_POST['fileName'];?>" height="200px"></img>
+
+    <img src="arquivos/<?php  echo $_POST['fileName'];?>" height="200px" class="imgProcesso"></img>
 
     <p>Enviar por Email</p>
     <form method="post" action="">
@@ -114,6 +115,7 @@ if (isset ($_POST['proc'])) {
 
 
 <hr>
+<div class="tabela">
 <table>
     
   <tr>
@@ -143,12 +145,12 @@ if (isset ($_POST['proc'])) {
         <form method="post">
             <input type="hidden" name="fileName" value="<?php  echo $row['fileName'];?>">
             <input type="hidden" name="protocolo" value="<?php  echo $row['protocolo'];?>">
-            <input type="submit" value="Visualizar" name="view">
+            <input type="submit" value="Visualizar" name="view" class="botao ">
         </form>
          
          
     </td>
-    <td><a href="functions/deletarArquivo.php?id=<?php  echo $row['id'];?>&prt=<?php  echo $row['protocolo'];?>&file=<?php  echo $row['fileName'];?>"  >Apagar</a></td>
+    <td><a class="botao" href="functions/deletarArquivo.php?id=<?php  echo $row['id'];?>&prt=<?php  echo $row['protocolo'];?>&file=<?php  echo $row['fileName'];?>"  >Apagar</a></td>
      
      
   </tr>
@@ -164,6 +166,7 @@ if (isset ($_POST['proc'])) {
 
 ?>
 </table>
+    </div>
 <?php
 
 
