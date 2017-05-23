@@ -2,6 +2,8 @@
  
 $home		= 'index.php'; 
 $author		= 'Yuri Alexsander';
+$telefone   = '(61) 9 9999-8888';
+$endereco   = 'Rua tal';
  
 $dbc 		= mysqli_connect('localhost', 'root', '', 'protocolo')
 		or die (Impossível); 

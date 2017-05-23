@@ -28,13 +28,12 @@ if (isset($_POST['view'])) {
       
     
     ?>
-    
+    <div class="usuario">
         <p><strong>Nome: </strong> <?php echo $_POST['name'].' '.$_POST['lastName'];?> </p>
         <p><strong>Email: </strong> <?php echo $_POST['mail'];?> </p>
         <p><strong>Login: </strong> <?php echo $_POST['login'];?> </p>
         <p><strong>Senha: </strong> <?php echo $_POST['password'];?> </p>
-
-
+    
 
 
 
@@ -48,11 +47,12 @@ if (isset($_POST['view'])) {
             <input type="hidden" name="mail" value="<?php echo $_POST['mail'];?>">
             <input type="hidden" name="login" value="<?php echo $_POST['login'];?>">
             <input type="hidden" name="password" value="<?php echo $_POST['password'];?>">
-            <input type="submit" value="Editar" name="edit">
+            <input type="submit" value="Editar" name="edit" class="botao">
             
             
         </form>
 
+</div>
 
 
 
@@ -68,12 +68,14 @@ if (isset($_POST['edit'])) {
       
     
     ?>
-    
+    <div class="usuario">
         <p><strong>Nome: </strong> <?php echo $_POST['name'].' '.$_POST['lastName'];?> </p>
         <p><strong>Email: </strong> <?php echo $_POST['mail'];?> </p>
         <p><strong>Login: </strong> <?php echo $_POST['login'];?> </p>
         <p><strong>Senha: </strong> <?php echo $_POST['password'];?> </p>
-
+        
+    </div>
+    <div class="formCadastro home" >
         <form method="post" action="functions/editarUsuario.php">
             
             <input type="hidden" name="id" value="<?php echo $_POST['id'];?>">
@@ -99,7 +101,7 @@ if (isset($_POST['edit'])) {
 
         </form>
 
-
+</div>
   <?php
 }
 
@@ -110,7 +112,8 @@ $results = $mysqli->query("SELECT * FROM user");
 ?>        
 
 
-<hr>
+
+<div class="tabela">
 <table>
     
   <tr>
@@ -144,7 +147,7 @@ while($row = $results->fetch_assoc()) {
         <input type="hidden" name="mail" value="<?php echo $row['mail'];?>">
         <input type="hidden" name="login" value="<?php echo $row['login'];?>">
         <input type="hidden" name="password" value="<?php echo $row['password'];?>">
-        <input type="submit" value="Visualizar" name="view">
+        <input type="submit" value="Visualizar" name="view" class="botao">
         
         
         </form></td>
@@ -163,3 +166,4 @@ while($row = $results->fetch_assoc()) {
     
     
 </table>
+</div>

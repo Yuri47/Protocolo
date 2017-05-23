@@ -145,6 +145,6 @@ require_once('functions/variaveis.php');
               
           
         </div><!-- /.navbar -->
-
+<hr>
       
  

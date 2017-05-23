@@ -1,61 +1,49 @@
 <?php 
-//session_start();
-//esse código verifica se o usuário está logado. Se tiver a página é liberada para ele acessar. Se não tiver logado ele será 
-//redirecionado para a página inicial.
 if(!isset($_SESSION['login'])){
     
 header('location:index.php');
 
 }
 
+
+ 
+
+    if(isset($_GET['msgEdit'])) {
+        if ($_GET['msgEdit'] == 'editar') {
+            echo "Informações Editadas.";
+        } else if ($_GET['msgEdit'] == 'apagar') {
+            echo "Usuário deletado com sucesso.";
+        }
+        
+    }  
+
+ 
+
 ?>
 
-<style type="text/css">
-
-</style>
 
 
-<div class="container">
-	<div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="well well-sm">
-          <form class="form-horizontal" action="" method="post">
-          <fieldset>
-            <legend class="text-center">Contact us</legend>
-    
-            <!-- Name input-->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="name">Name</label>
-              <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
-              </div>
-            </div>
-    
-            <!-- Email input-->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="email">Your E-mail</label>
-              <div class="col-md-9">
-                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-              </div>
-            </div>
-    
-            <!-- Message body -->
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="message">Your message</label>
-              <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-              </div>
-            </div>
-    
-            <!-- Form actions -->
-            <div class="form-group">
-              <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-              </div>
-            </div>
-          </fieldset>
-          </form>
-        </div>
-      </div>
-	</div>
+
+
+
+
+
+<div class="contato">
+<h1>Sistema de Protocolos JK - 2017</h1>
+<p>Desenvolvido por <?php echo $author ?></p>
+<p>Fone: <?php echo $telefone ?></p>
+<p>Endereço: <?php echo $endereco ?></p>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+

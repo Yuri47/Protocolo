@@ -49,7 +49,7 @@ if (isset ($_POST['proc'])) {
     $results = $mysqli->query("SELECT * FROM file WHERE idUser = '$id'");
 
 ?>
-<hr>
+
 
 <?php 
     if (isset($_POST['view'])) {
@@ -59,7 +59,8 @@ if (isset ($_POST['proc'])) {
 
     <img src="arquivos/<?php  echo $_POST['fileName'];?>" height="200px" class="imgProcesso"></img>
 
-    <p>Enviar por Email</p>
+<div class="formCadastro home">
+    <p class="pCadastro">Enviar por Email</p>
     <form method="post" action="">
         <label for="mail">Digite o Email de destino</label>
         <input type="text" name="mail">
@@ -75,6 +76,7 @@ if (isset ($_POST['proc'])) {
         
 
     </form>
+    </div>
 <?php
     }
 ?>        
@@ -114,7 +116,7 @@ if (isset ($_POST['proc'])) {
 ?>        
 
 
-<hr>
+
 <div class="tabela">
 <table>
     
