@@ -18,7 +18,7 @@ header('location:index.php');
 
 <form class="formArquivo" method="post" action="index.php?p=processos" enctype="multipart/form-data">
    
-  <input type="file" name="arquivo" class="  botaoArquivo"/>
+  <input type="file" name="arquivo" class="  botaoArquivo" required/>
   
   <input type="submit" value="Enviar" name="proc" class="botao"/>
 </form>
@@ -58,16 +58,16 @@ if (isset ($_POST['proc'])) {
 ?>
 
     <img src="arquivos/<?php  echo $_POST['fileName'];?>" height="200px" class="imgProcesso"></img>
-
+<p> <a target="_black" href="arquivos/<?php  echo $_POST['fileName'];?>">Clique aqui para acessar o arquivo</a></p>
 <div class="formCadastro home">
     <p class="pCadastro">Enviar por Email</p>
     <form method="post" action="">
         <label for="mail">Digite o Email de destino</label>
-        <input type="text" name="mail">
+        <input type="text" name="mail" required>
         <label for="mail">Assunto</label>
-        <input type="text" name="subject">
+        <input type="text" name="subject" required>
         <label for="mail">Mensagem</label>
-        <input type="text" name="message">
+        <input type="text" name="message" required>
         <input type="hidden" name="fileName" value="<?php  echo $_POST['fileName'];?>">
         <input type="hidden" name="protocolo" value="<?php  echo $_POST['protocolo'];?>">
         

@@ -1,7 +1,7 @@
 
 
 
-<div class="thumbnail">
+<div class="">
 	ERRO 4004
 </div>
 

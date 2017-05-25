@@ -1,8 +1,8 @@
 <?php 
  
 $home		= 'index.php'; 
-$author		= 'Yuri Alexsander';
-$telefone   = '(61) 9 9999-8888';
+$author		= 'Lucas Popolin';
+$telefone   = '(61) 9 9149-8362';
 $endereco   = 'Rua tal';
  
 $dbc 		= mysqli_connect('localhost', 'root', '', 'protocolo')

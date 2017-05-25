@@ -50,19 +50,13 @@ require_once('functions/variaveis.php');
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<!-- Le styles -->
+		 
 		<link href="estilo/estilo.css" rel="stylesheet">
-		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-		<!-- GLOBAL STYLES-->
-		<link href="bootstrap/css/global-style.css" rel="stylesheet">
+		 
+		 
+		 
 
-
-		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-			<script src="../assets/js/html5shiv.js"></script>
-		<![endif]-->
-
-		<!-- Fav and touch icons -->
+ 
     <link rel="shortcut icon" href="bootstrap/img/favicon.ico">
 
 	
@@ -79,19 +73,17 @@ require_once('functions/variaveis.php');
         
         
 
-	<!-- NAVBAR
-    ================================================== -->
-    
+ 
 
         <div class="containerTop">
           <div class="logo">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+             
              <img src="arquivos/alppa.png">
                             
               <?php
                 session_start();
 ?>
-     </div><!-- /.navbar-inner -->
+     </div> 
               
               
               

@@ -4,7 +4,7 @@ $_UP['pasta'] = 'arquivos/';
 // Tamanho máximo do arquivo (em Bytes)
 $_UP['tamanho'] = 1024 * 1024 * 2; // 2Mb
 // Array com as extensões permitidas
-$_UP['extensoes'] = array('jpg', 'png', 'gif', 'pdf');
+$_UP['extensoes'] = array('jpg', 'png', 'gif', 'pdf', 'rar', 'doc');
 // Renomeia o arquivo? (Se true, o arquivo será salvo como .jpg e um nome único)
 $_UP['renomeia'] = true;
 // Array com os tipos de erros de upload do PHP
@@ -37,7 +37,7 @@ if ($_UP['renomeia'] == true) {
   // Cria um nome baseado no UNIX TIMESTAMP atual e com extensão .jpg
   $nome_final = substr(md5(uniqid(rand(1,6))), 0, 10).'.'.$extensao;
 } else {
-  // Mantém o nome original do arquivo
+  // Se o renomeia for true aqui ele renomeia o arquivo
   $nome_final = $_FILES['arquivo']['name'];
 }
   
@@ -53,7 +53,7 @@ if (move_uploaded_file($_FILES['arquivo']['tmp_name'], $_UP['pasta'] . $nome_fin
   echo "Protocolo: ".  $protocolo;
   echo "<br>";
     
-  echo '<a href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';
+  echo '<a target="_black" href="' . $_UP['pasta'] . $nome_final . '">Clique aqui para acessar o arquivo</a>';
 } else {
   // Não foi possível fazer o upload, provavelmente a pasta está incorreta
   echo "Não foi possível enviar o arquivo, tente novamente";
