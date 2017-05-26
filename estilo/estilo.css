@@ -202,13 +202,18 @@ footer p {
     max-width: 960px;
 }
 .formCadastro{
-    float: left;
+    margin: 0px auto;
     width: 50%;
      
     font-size: 1.4em;
 }
+.cad {
+     
+}
+
 .formLogin {
-    float: right;
+    margin: 0px auto;
+     
     width: 50%;
     font-size: 1.4em;
 }
@@ -233,6 +238,24 @@ footer p {
     text-indent: 10px;
     border: solid 2px #333;
 }
+.log input{
+    margin-left: 0px;
+}
+.log label {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.formCadastro input{
+    margin-left: 0px;
+}
+.formCadastro label{
+    text-align: left;
+    margin-left: 40px;
+}
+
+
+
 .pHome {
     font-size: 2em;
     margin-top: 20px;
@@ -244,9 +267,9 @@ footer p {
     color: black;
     font-size: 1.4em;
     height: 60px;
-    text-align: left;
-    float: none;
-    margin-left: 50px;
+    text-align: center;
+     
+     
     font: "Arial";
     color: #333;
 }
@@ -281,7 +304,7 @@ footer p {
 .home .botaoSubmit {
      
          text-indent: 0px;
-    margin-left: 0px;
+    margin-left: 35px;
 }
 
  
@@ -341,4 +364,13 @@ footer p {
 }
 .contato p {
     margin-bottom: 10px;
+}
+
+.botaoLog {
+    font-size: 50px;
+}
+.botaoCadastrar {
+    margin-left: 200px;
+    margin-top: ;
+    border-style: hidden ;
 }
