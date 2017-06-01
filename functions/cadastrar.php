@@ -16,6 +16,8 @@ $query = "INSERT INTO `user` (`id`, `name`, `lastName`, `login`, `mail`, `passwo
 
 mysqli_query($dbc, $query) or die (mysqli_error($dbc));
 
- 
+ echo"<script language='javascript' type='text/javascript'>window.location.href='index.php';</script>";
+
+
 
 ?>
